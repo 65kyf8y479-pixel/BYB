@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", ui-serif, Georgia, serif;
+  
+  --color-primary: #000000;
+  --color-primary-dark: #111111;
+  --color-accent: #000000;
+  --color-accent-dark: #333333;
+  
+  --color-bg: #FFFFFF;
+  --color-panel: #FAFAFA;
+  --color-text: #000000;
+  --color-text-muted: #737373;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Luxury animations */
+@keyframes fade-in-slow {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in-slow {
+  animation: fade-in-slow 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes pulse-elegant {
+  0%, 100% { opacity: 1; filter: grayscale(0%); }
+  50% { opacity: 0.8; filter: grayscale(20%); }
+}
+.animate-pulse-elegant {
+  animation: pulse-elegant 4s ease-in-out infinite;
+}
